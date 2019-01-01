@@ -4,7 +4,11 @@
 
 ### 这是什么？
 
+<<<<<<< HEAD
 LuCompiler，是我为自己设计的语言——**lu语言**编写的编译器，能够将lu语言编译成vbs脚本语言。（lu语言是专门为了找图类自动脚本而设计的语言）
+=======
+LuCompiler，是我为自己设计的语言——**lu语言**编写的编译器，能够将lu语言编译成vbs脚本语言，而lu语言是本人设计的，专门为了找图类自动脚本而创造的语言。
+>>>>>>> d579b5ad31ac578f87eabc9524634fb6f0685ec1
 
 
 
@@ -55,7 +59,7 @@ LuCompiler，是我为自己设计的语言——**lu语言**编写的编译器�
        X = Clng(Left(XY, ZB - 1)): Y = Clng(Right(XY, Len(XY) - ZB))//找到的X,Y的坐标
        
        If X > 0 And Y > 0 Then //若找到聊天窗口
-           //定位聊天窗口，(X1,Y1)、(X2,Y2)分别是聊天窗口的左上角和右上角
+           //定位聊天窗口，(X1,Y1)、(X2,Y2)分别是聊天窗口的左上角和右下角
            X1 = X + msgwindow_offsetX
            Y1 = Y + msgwindow_offsetY
            X2 = X1 + msgwindow_width
