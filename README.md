@@ -55,7 +55,7 @@ LuCompiler，是我为自己设计的语言——**lu语言**编写的编译器�
        X = Clng(Left(XY, ZB - 1)): Y = Clng(Right(XY, Len(XY) - ZB))//找到的X,Y的坐标
        
        If X > 0 And Y > 0 Then //若找到聊天窗口
-           //定位聊天窗口，(X1,Y1)、(X2,Y2)分别是聊天窗口的左上角和右上角
+           //定位聊天窗口，(X1,Y1)、(X2,Y2)分别是聊天窗口的左上角和右下角
            X1 = X + msgwindow_offsetX
            Y1 = Y + msgwindow_offsetY
            X2 = X1 + msgwindow_width
