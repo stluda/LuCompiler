@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{906AEC77-6252-46E5-85A8-A5CD063C3C41}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LuCompiler</RootNamespace>
+    <AssemblyName>LuCompiler</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="dm">
+      <HintPath>.\dm.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="lua51">
+      <HintPath>.\lua51.dll</HintPath>
+    </Reference>
+    <Reference Include="LuaInterface">
+      <HintPath>.\LuaInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\Array.cs" />
+    <Compile Include="Base\ExternalVariable.cs" />
+    <Compile Include="Base\Macro.cs" />
+    <Compile Include="C.cs" />
+    <Compile Include="Base\Context.cs" />
+    <Compile Include="Base\State.cs" />
+    <Compile Include="Dict.cs" />
+    <Compile Include="Dictmapper.cs" />
+    <Compile Include="Element\AEObjectReader.cs" />
+    <Compile Include="Element\Area.cs" />
+    <Compile Include="Element\Element.cs" />
+    <Compile Include="Element\AEObject.cs" />
+    <Compile Include="Element\OcrStringInfo.cs" />
+    <Compile Include="Expression\E2Expression\DotExpression.cs" />
+    <Compile Include="Expression\ExternalExpression.cs" />
+    <Compile Include="External\User32.cs" />
+    <Compile Include="Ftp\FuncTimeout.cs" />
+    <Compile Include="Function\AEFunctionSwitcher.cs" />
+    <Compile Include="Function\AEFunction\CaptureEFunction.cs" />
+    <Compile Include="Function\AEFunction\FClickEFunction.cs" />
+    <Compile Include="Element\Findable\FindableArea.cs" />
+    <Compile Include="Element\Findable\FindableElement.cs" />
+    <Compile Include="Element\Findable\IFindable.cs" />
+    <Compile Include="Element\Findable\IReferable.cs" />
+    <Compile Include="Expression\StateExpression.cs" />
+    <Compile Include="Function\AEFunction.cs" />
+    <Compile Include="Function\AEFunction\AEFindFunction.cs" />
+    <Compile Include="Function\AEFunction\FindAFunction.cs" />
+    <Compile Include="Function\AEFunction\FindEFunction.cs" />
+    <Compile Include="Function\AEFunction\FindStrFunction.cs" />
+    <Compile Include="Function\AEFunction\OcrInAreaFunction.cs" />
+    <Compile Include="Function\AEFunction\FDBClickEFunction.cs" />
+    <Compile Include="Function\DebugLogFunction.cs" />
+    <Compile Include="Function\Event.cs" />
+    <Compile Include="Function\FunctionSwitcher.cs" />
+    <Compile Include="Function\FunctionWriter.cs" />
+    <Compile Include="Function\KernalFunction.cs" />
+    <Compile Include="Function\Main.cs" />
+    <Compile Include="Function\Module.cs" />
+    <Compile Include="Function\SysFunction.cs" />
+    <Compile Include="G.cs" />
+    <Compile Include="InterpretException.cs" />
+    <Compile Include="IShellLinkW.cs" />
+    <Compile Include="Lua\LuaScriptCaller.cs" />
+    <Compile Include="M.cs" />
+    <Compile Include="Other\DebugLevel.cs" />
+    <Compile Include="Other\ElementRegex.cs" />
+    <Compile Include="Base\Constant.cs" />
+    <Compile Include="Expression\ExpressionInterpreter.cs" />
+    <Compile Include="Expression\E2Expression\AssignmentExpression.cs" />
+    <Compile Include="Expression\E1Expression\E1Expression.cs" />
+    <Compile Include="Expression\E1Expression\PostfixExpression.cs" />
+    <Compile Include="Expression\E2Expression\AdditiveExpression.cs" />
+    <Compile Include="Expression\E2Expression\E2Expression.cs" />
+    <Compile Include="Expression\E2Expression\EqualityExpression.cs" />
+    <Compile Include="Expression\E2Expression\RelationalExpression.cs" />
+    <Compile Include="Expression\Data.cs" />
+    <Compile Include="Base\SyntaxElement.cs" />
+    <Compile Include="Expression\E2Expression\LogicalANDExpression.cs" />
+    <Compile Include="Expression\E2Expression\LogicalORExpression.cs" />
+    <Compile Include="Expression\E2Expression\MultiplicativeExpression.cs" />
+    <Compile Include="Expression\E1Expression\UnaryExpression.cs" />
+    <Compile Include="Expression\E3Expression\ConditionalExpression.cs" />
+    <Compile Include="Base\Symbol.cs" />
+    <Compile Include="Other\enum.cs" />
+    <Compile Include="Expression\CommaExpression.cs" />
+    <Compile Include="Function\Function.cs" />
+    <Compile Include="Ftp\FtpWeb.cs" />
+    <Compile Include="Other\FileLinker.cs" />
+    <Compile Include="Other\Hashtable.cs" />
+    <Compile Include="Expression\Expression.cs" />
+    <Compile Include="Other\Hashtable2.cs" />
+    <Compile Include="Other\KeyWords.cs" />
+    <Compile Include="Other\Replacer.cs" />
+    <Compile Include="Other\Tags.cs" />
+    <Compile Include="PathOpener.cs" />
+    <Compile Include="ProgramInterpreter.cs" />
+    <Compile Include="Statement\ConditionStatement\EveryStatement.cs" />
+    <Compile Include="Statement\ConditionStatement\ExternalStatement.cs" />
+    <Compile Include="Statement\ConditionStatement\LimitedLoopStatement.cs" />
+    <Compile Include="Statement\ConditionStatement\LoopStatement.cs" />
+    <Compile Include="Statement\ConditionStatement\SwitchStatement.cs" />
+    <Compile Include="Statement\DebugStatement.cs" />
+    <Compile Include="Statement\MacroStatement\LogStatement.cs" />
+    <Compile Include="Statement\MacroStatement\MacroStatement.cs" />
+    <Compile Include="Statement\MacroStatement\TraceStatement.cs" />
+    <Compile Include="Statement\NextStatement.cs" />
+    <Compile Include="Statement\SingleStatement.cs" />
+    <Compile Include="Statement\Block.cs" />
+    <Compile Include="Statement\ConditionStatement\ConditionStatement.cs" />
+    <Compile Include="Statement\ConditionStatement\IfStatement.cs" />
+    <Compile Include="Statement\DeclarationStatement.cs" />
+    <Compile Include="Statement\ExitStatement\BreakStatement.cs" />
+    <Compile Include="Statement\ExitStatement\ContinueStatement.cs" />
+    <Compile Include="Statement\ExitStatement\InLoopStatement.cs" />
+    <Compile Include="Statement\ExitStatement\ReturnStatement.cs" />
+    <Compile Include="Statement\IfSentence.cs" />
+    <Compile Include="Statement\KeywordSentence.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Statement\Statement.cs" />
+    <Compile Include="Base\Variable.cs" />
+    <Compile Include="Statement\StatementInterpreter.cs" />
+    <Compile Include="Statement\StateStatement.cs" />
+    <Compile Include="Statement\WhileSentence.cs" />
+    <Compile Include="Other\SymbolPriority.cs" />
+    <Compile Include="Token\DefinedTokenTaker.cs" />
+    <Compile Include="Token\ITokenTaker.cs" />
+    <Compile Include="Token\CodeTokenTaker.cs" />
+    <Compile Include="Windows\Windows.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
